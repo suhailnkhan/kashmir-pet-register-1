@@ -1,9 +1,9 @@
 import type { Express } from "express";
 import { type Server } from "http";
 import { storage } from "./storage";
-import { insertPetRegistrationSchema } from "@shared/schema";
+import { insertPetRegistrationSchema } from "../shared/schema";
 import { z } from "zod";
-import { BLOCKS, BLOCK_DISPENSARIES, DEFAULT_VET_CREDENTIALS, ALL_DISPENSARIES } from "@shared/kupwara-data";
+import { BLOCKS, BLOCK_DISPENSARIES, DEFAULT_VET_CREDENTIALS, ALL_DISPENSARIES } from "../shared/kupwara-data";
 
 export async function registerRoutes(
   httpServer: Server,

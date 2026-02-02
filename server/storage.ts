@@ -1,5 +1,5 @@
 import { db } from "../db";
-import { type User, type InsertUser, type PetRegistration, type InsertPetRegistration, type VetOfficer, type InsertVetOfficer, petRegistrations, users, vetOfficers } from "@shared/schema";
+import { type User, type InsertUser, type PetRegistration, type InsertPetRegistration, type VetOfficer, type InsertVetOfficer, petRegistrations, users, vetOfficers } from "../shared/schema";
 import { eq, or, ilike, and, sql } from "drizzle-orm";
 
 export interface IStorage {
