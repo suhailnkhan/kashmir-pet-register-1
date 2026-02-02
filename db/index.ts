@@ -8,9 +8,8 @@ if (!process.env.DATABASE_URL) {
   );
 }
 
-const client = new pg.Client({
+const pool = new pg.Pool({
   connectionString: process.env.DATABASE_URL,
 });
 
-client.connect();
-export const db = drizzle({ client, schema, casing: "snake_case" });
+export const db = drizzle({ client: pool, schema, casing: "snake_case" });
